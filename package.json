@@ -1,7 +1,12 @@
 {
-  "name": "email-testing",
+  "name": "email-temp",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "description": "Hauptprojekt zum Steuern der Sub-Projekte",
+  "workspaces": [
+    "email-builder",
+    "landingpage"
+  ],
   "scripts": {
     "start:emails": "npm start --prefix email-builder",
     "start:landingpage": "npm run dev --prefix landingpage",
@@ -10,10 +15,6 @@
     "build:landingpage": "npm run build --prefix landingpage",
     "build": "npm-run-all build:emails build:landingpage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "npm-run-all": "^4.1.5"
   }
