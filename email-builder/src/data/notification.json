@@ -1,0 +1,17 @@
+{
+  "subject": "Ihre Bestellung wurde bestätigt",
+  "customer": {
+    "name": "Max Mustermann",
+    "is_premium": true
+  },
+  "order": {
+    "id": "A-12345",
+    "items": [
+      { "name": "Produkt A", "quantity": 1, "price": 19.99 },
+      { "name": "Produkt B", "quantity": 2, "price": 4.50 }
+    ],
+    "total": 28.99,
+    "currency": "EUR"
+  },
+  "confirmation_token": "xyz-abc-123-das-ist-ein-test-token-456"
+}

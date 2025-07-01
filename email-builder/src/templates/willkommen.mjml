@@ -1,0 +1,22 @@
+<mjml>
+  <mj-head>
+    <mj-title>Willkommen bei unserem Service</mj-title>
+  </mj-head>
+  <mj-body>
+    {% include "partials/header" %}
+    <mj-section background-color="#f4f4f4"  border-radius="0 0 8px 8px">
+      <mj-column>
+        <mj-text>
+          <h1>{{ greeting }}</h1>
+          <p>
+            {{ body }}
+          </p>
+        </mj-text>
+      </mj-column>
+      <mj-column>
+          <mj-image width="420px" src="https://picsum.photos/id/26/4209/2769" alt="Willkommen Bild"></mj-image>
+      </mj-column>
+    </mj-section>
+    {% include "partials/footer" %}
+  </mj-body>
+</mjml>

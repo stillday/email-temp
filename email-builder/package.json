@@ -1,0 +1,20 @@
+{
+  "name": "email-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node build.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "browser-sync": "^3.0.4",
+    "chokidar": "^4.0.3",
+    "fs-extra": "^11.3.0",
+    "liquidjs": "^10.21.1",
+    "mjml": "^4.15.3"
+  }
+}

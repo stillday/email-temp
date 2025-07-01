@@ -1,0 +1,7 @@
+<mj-section background-url="https://picsum.photos/id/56/2880/1920" background-size="cover" padding="0">
+  <mj-column width="600px">
+    <mj-text align="center" font-size="40px" color="#ffffff" padding="50px 0">
+      {{ subject }}
+    </mj-text>
+  </mj-column>
+</mj-section>

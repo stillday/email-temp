@@ -1,0 +1,9 @@
+{
+  "subject": "Willkommen bei unserem Service!",
+  "greeting": "Hallo Max Mustermann,",
+  "body": "Wir freuen uns, Sie bei uns zu haben. Hier sind einige Informationen, die Ihnen den Einstieg erleichtern.",
+  "customer": {
+    "name": "Max Mustermann",
+    "email": "max@mustermann.de"
+  }
+}

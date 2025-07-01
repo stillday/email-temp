@@ -1,0 +1,54 @@
+<mjml>
+  <mj-head>
+    <mj-title>{{ subject }}</mj-title>
+  </mj-head>
+  <mj-body>
+    {% include "partials/header" %}
+
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          <h1>Hallo {{ customer.name }},</h1>
+          <p>
+            vielen Dank für Ihre Bestellung. Ihre Bestellnummer lautet: <strong>{{ order.id }}</strong>.
+          </p>
+        </mj-text>
+
+        <mj-table>
+          <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+            <th style="padding: 0 15px 0 0;">Produkt</th>
+            <th style="padding: 0 15px;">Menge</th>
+            <th style="padding: 0 0 0 15px;">Preis</th>
+          </tr>
+          {% for item in order.items %}
+          <tr>
+            <td style="padding: 0 15px 0 0;">{{ item.name }}</td>
+            <td style="padding: 0 15px;">{{ item.quantity }}</td>
+            <td style="padding: 0 0 0 15px;">{{ item.price | round: 2 }} €</td>
+          </tr>
+          {% endfor %}
+        </mj-table>
+        <mj-text>
+          <p>
+            Der Gesamtbetrag Ihrer Bestellung beträgt: <strong>{{ order.items | sum: "price" }} €</strong>.
+          </p>
+          <p> 0
+            Bitte bestätigen Sie Ihre E-Mail-Adresse, um Ihre Bestellung abzuschließen.
+          </p>
+        </mj-text>
+        <mj-button href="http://localhost:4321/confirm?token={{ confirmation_token }}" background-color="#007bff" color="#ffffff">
+          Bestätigung ansehen
+        </mj-button>
+
+        {% if customer.is_premium %}
+        <mj-text>
+          <p>Als Premium-Kunde erhalten Sie bei uns kostenlosen Versand!</p>
+        </mj-text>
+        {% endif %}
+
+      </mj-column>
+    </mj-section>
+
+    {% include "partials/footer" %}
+  </mj-body>
+</mjml>
